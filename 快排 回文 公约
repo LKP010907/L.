@@ -1,0 +1,91 @@
+/////快排
+//#include <stdio.h>
+//
+//// 交换两个元素的值
+//void swap(int* a, int* b) {
+//	int temp = *a;
+//	*a = *b;
+//	*b = temp;
+//}
+//
+//// 分区函数，将数组划分为左右两部分，并返回分区点的索引
+//int partition(int arr[], int low, int high) {
+//	int pivot = arr[high]; // 选择最后一个元素作为枢轴
+//	int i = low - 1; // 初始化分区点的位置
+//	for (int j = low; j < high; j++) {
+//		if (arr[j] < pivot) {
+//			i++;
+//			swap(&arr[i], &arr[j]);
+//		}
+//	}
+//	swap(&arr[i + 1], &arr[high]);
+//	return i + 1;
+//}
+//
+//// 快速排序函数
+//void quickSort(int arr[], int low, int high) {
+//	if (low < high) {
+//		int pivotIndex = partition(arr, low, high); // 获取分区点的索引
+//		quickSort(arr, low, pivotIndex - 1); // 对分区点左侧的部分进行快速排序
+//		quickSort(arr, pivotIndex + 1, high); // 对分区点右侧的部分进行快速排序
+//	}
+//}
+//
+//// 测试程序
+//int main() {
+//	int arr[] = { 10, 7, 8, 9, 1, 5 };
+//	int n = sizeof(arr) / sizeof(arr[0]);
+//	quickSort(arr, 0, n - 1);
+//	printf("排序后的数组是：");
+//	for (int i = 0; i < n; i++) {
+//		printf("%d ", arr[i]);
+//	}
+//	printf("\n");
+//	return 0;
+//}
+
+////回文
+//#define _CRT_SECURE_NO_WARNINGS 
+//#include<stdio.h>
+//#include<string.h>
+//int main() {
+//	char arr[] = "7411475";
+//	int len = strlen(arr);
+//	int i, k=0;
+//	for (i = 0; i < len / 2; i++) {
+//		if (arr[i] != arr[len - i-1]) {
+//			k++;
+//			break;
+//		}
+//	}
+//	if (k > 0) {
+//		printf("no");
+//	}
+//	else
+//	{
+//		printf("yes");
+//	}
+//}
+
+//
+//最大公约数和最小公倍数
+//#define _CRT_SECURE_NO_WARNINGS 
+//#include<stdio.h>
+//#include<string.h>
+//int max(int a, int b) { //辗转相除
+//	if (b == 0) {
+//		return a;
+//	}
+//	return max(b, a % b);
+//}
+//int min(int a, int b) {
+//	return (a * b) / max(a, b); //最小公倍数=a*b/最大公约数
+//}
+//int main() {
+//	int a, b;
+//	scanf("%d%d", &a, &b);
+//	int x = max(a, b);
+//	int y = min(a, b);
+//	printf("%d %d", x, y);
+//	
+//}
