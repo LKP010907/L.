@@ -1,0 +1,112 @@
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//				  //结构体 计算本日是一年中的第多少天
+//struct dem
+//{
+//	int year;
+//	int month;
+//	int day;
+//
+//};
+//int main() {  
+//	struct dem runnian;
+//	int y = runnian.year;
+//	int m = runnian.month;
+//	int d = runnian.day;
+//	scanf("%d %d %d", &y, &m, &d);
+//	int arr[12] = { 31,28,31,30,31,30,31,31,30,31,30,31 };
+//	int sum = 0;
+//	if (y % 4 == 0 && y % 100 != 0 || y % 400 == 0) {
+//		arr[1] = 29;
+//	}
+//	else { arr[1] = 28; }
+//	int i;
+//	for (i = 0; i < m - 1; i++) {
+//		sum = sum + arr[i];
+//	}
+//	sum = sum + d;
+//	printf("%d", sum);
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS  //结构体，输入输出学生数据
+//#include<stdio.h>
+//struct stu
+//{
+//	char xuehao[16];
+//	char xingming[32];
+//	int chengji[3];
+//};
+//void input(struct stu *a, int n) {
+//	int i;
+//	for (i = 0; i < n; i++) {
+//		scanf("%s %s %d %d %d", &(a[i].xuehao),&( a[i].xingming), &(a[i].chengji[0]), &(a[i].chengji[1]), &(a[i].chengji[2]) );
+//	}
+//}
+//void print(struct stu *a, int n) {
+//	int i;
+//	for (i = 0; i < n; i++) {
+//		printf("%s %s %d %d %d\n", a[i].xuehao, a[i].xingming, a[i].chengji[0], a[i].chengji[1], a[i].chengji[2]);
+//	}
+//}
+//int main() {
+//	int n;
+//	 scanf("%d", &n);
+//	 struct stu a[n];
+//	 input(a, n);
+//	 print(a, n);
+//	
+//}
+
+
+//#define _CRT_SECURE_NO_WARNINGS  //结构体，输入输出学生数据
+//#include<stdio.h>
+//struct stu
+//{
+//	char xuehao[100];
+//	char xingming[100];
+//	int chengji[3];
+//};
+//void input(struct stu* a, int n) {
+//	int i;
+//	for (i = 0; i < n; i++) {
+//		scanf("%s %s %d %d %d \n", &(a[i].xuehao), &(a[i].xingming), &(a[i].chengji[0]), &(a[i].chengji[1]), &(a[i].chengji[2]));
+//	}
+//}
+//void print(struct stu* a, int n) {
+//	int i;
+//	int avg1, avg2, avg3;
+//	int sum1 = 0, sum2 = 0, sum3 = 0;
+//	for (i = 0; i < n; i++) {
+//
+//		sum1 = sum1 + a[i].chengji[0];
+//		sum2 = sum2 + a[i].chengji[1];
+//		sum3 = sum3 + a[i].chengji[2];
+//
+//	}
+//	avg1 = sum1 / n;
+//	avg2 = sum2 / n;
+//	avg3 = sum3 / n;
+//	printf("%d %d %d \n", avg1, avg2, avg3);
+//}
+//void max(struct stu* a, int n) {
+//	int i, j;
+//	int stm;
+//	int k = 0;
+//	for (i = 0; i < n; i++) {
+//		stm = a[i].chengji[0] + a[i].chengji[1] + a[i].chengji[2];
+//		if (stm > k) {
+//			k = stm;
+//			j = i;
+//		}
+//	}
+//	printf("%s %s %d %d %d", a[j].xuehao, a[j].xingming, a[j].chengji[0], a[j].chengji[1], a[j].chengji[2]);
+//}
+//int main() {
+//	int n;
+//	scanf("%d", &n);
+//	struct stu a[n];
+//	input(a, n);
+//	print(a, n);
+//	max(a, n);
+//
+//}
